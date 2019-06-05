@@ -45,3 +45,18 @@ function launcNotification(data) {
         }, 2000)
     }, 15000)
 }
+
+function scriptState(message, type, bloc) {
+
+    var color;
+
+    if (/success/i.test(type)) {
+        color = "#2cb144";
+    }else if (/error|erreur|oupps/i.test(type)) {
+        color = "#f00"
+    }
+
+    var content =`<div id="setFlash" style="background-color: ${color}">${message}</div>`;
+
+    $(bloc).append(content);
+}

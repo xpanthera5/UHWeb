@@ -35,7 +35,6 @@ var users = {
 				nom: $('#nomUser').val(),
 				prenom: $('#prenomUser').val(),
 				email: $('#emailUser').val(),
-				telephone: $('#telUser').val(),
 				password: $('#mdpUser').val()
 			}
 
@@ -80,6 +79,8 @@ var users = {
 						
 					}
 				})
+			}else{
+				
 			}
 		})
 	}
