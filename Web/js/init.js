@@ -1,10 +1,9 @@
 function getHostApi() {
-    return 'http://localhost:8080/uhtec-training-api/';
-    // return 'https://412c0904.ngrok.io/';
+    return 'http://localhost:8080/UHAPI/';
 }
 
 function getWebSiteHost() {
-    return 'http://uhtec-website.com:8080/';
+    return 'http://UHWEB.com:8080/';
 }
 
 function elementsObjectNotEmpty(object) {
