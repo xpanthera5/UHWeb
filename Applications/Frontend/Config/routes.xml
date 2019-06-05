@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<routes>
+	<route url="/" controller="Pages" action="index" />
+	<route url="/emplois" controller="Emplois" action="index" />
+	<route url="/compte/([1-9]+[0-9]*)/profile/accueil" controller="Compte" action="accueil" />
+	<route url="/forgetMdp" action="index" controller="Forget"/>
+	<route url="/recrutement" action="index" controller="Recrutement"/>
+	<!-- Route affichant toutes les formations -->
+	<route url="/formations" controller="Formations" action="index" />
+
+	<!-- Route affichant les formations d'une categorie -->
+	<route url="/formations/([1-9]+[0-9]*)/toutes-les-formations" controller="Formations" action="formationsByCat" />
+
+	<!-- Route affichant les details d'une formation -->
+	<!-- <route url="/formations/([1-9]+[0-9]*)/details" controller="Formations" action="detailsFormation" /> -->
+	<route url="/formations/([a-z0-9\-]+)([_0-9]+)/([a-z0-9\-]+)([_0-9]+)/([1-9]+[0-9]*)/?" controller="Formations" action="detailsFormation" vars="nom_cat,id_cat,nom_sous_cat,id_sous_cat,id_formation" />
+
+	<!-- Route affichant les détails sur la session d'une formation -->
+	<!-- 1.formations, 2.id_formation, 3.id_session -->
+	<route url="/formations/([1-9]+[0-9]*)/([1-9]+[0-9]*)/souscription" controller="Formations" action="detailsSession" />
+
+	<!-- Route qui mene vers la page d'inscription ou de connexion -->
+
+</routes>

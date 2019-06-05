@@ -1,0 +1,542 @@
+body.bodyForForget{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.segoe-light{
+	font-family: Segoe UI Light;
+}
+
+.segoe-black{
+	font-family: segoe UI black;
+}
+
+.c-white{
+	color: white;
+}
+
+.overlay-form{
+	position: absolute;
+	width: 100px;
+	height: 31%;
+	background-color: rgba(254,102,1,0.7);
+	right: 0;
+	margin-right: 15px;
+}
+.overlay-form-category{
+	position: absolute;
+	margin-top: -100px;
+	background-color: rgba(254,102,1,0.4);
+	width: 76%;
+	height: 100px;
+}
+
+.overlay-form-category-content{
+  padding-top: 40%;
+}
+
+.dateBox i{
+  color: #ff4500;
+}
+
+.dateBox.encours span.dateLibelle{
+  background-color: #ff4500;
+  padding: 10px 15px;
+  color: white;
+  font-family: Segoe UI Light;
+  font-size: 17px;
+}
+
+.dateBox.desactive span.dateLibelle{
+  background-color: rgba(255,69,0,0.4);
+  padding: 10px 15px;
+  color: white;
+  font-family: Segoe UI Light;
+  font-size: 17px;
+}
+
+.tb-offre{
+	border-bottom:1px solid #a6a6a6;
+}
+
+.tb-offre:last-child{
+	border-bottom:none;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 4px;
+    border: 4px solid #ff4500;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ff4500 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+div.activateAccount{
+	position: fixed;
+	height: auto;
+	overflow: hidden;
+	z-index: 99999;
+	margin-bottom: 10px;
+	/*margin: 0;*/
+	padding: 0;
+	width: 100%;
+
+	-webkit-background-clip: padding-box;
+	    -ms-background-clip: padding-box;
+	   -moz-background-clip: padding-box;
+	     -o-background-clip: padding-box;
+	        background-clip: padding-box;
+
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	    -ms-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	   -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	     -o-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+div.activateAccount .wrapper{
+	width: 100%;
+	background-color: white;
+	color: #fff;
+	font-family: Calibri, sans-serif;
+	font-size: 0.95em;
+	text-align: center;
+  line-height: 20px;
+	padding: 4px 0;
+	letter-spacing: 1.1px;
+}
+
+.btn-programme{
+	width: 100%;
+	background-color: transparent;
+	border: 1px solid #fe6601;
+	color: #fe6601;
+	font-family: Segoe UI Light;
+	cursor: pointer;
+}
+
+.btn-programme:hover{
+	background-color: #fe6601;
+	border: 1px solid #fe6601;
+	color: white;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.formationBox{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.formationBoxTitle{
+  font-size: 18px;
+  border-left: 3px solid #fe6601;
+  background-color: #f0f2f6;
+  padding: 15px 10px;
+}
+
+.formationBoxDescription{
+  text-align: justify;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.register_img{
+  margin-top: 60%;
+  margin-left: 25%;
+}
+
+.login-box{
+  margin-top: 20%;
+}
+
+.register-box{
+  margin-top: 5%;
+}
+
+.login-box h2,.register-box h2{
+  color: #ffffff;
+  font-family: Segoe UI black;
+  text-align: center;
+}
+
+.lgInput{
+  width: 70%;
+  margin-bottom: -30px;
+}
+
+.forgetMdp{
+  font-family: Segoe UI Light;
+  font-size: 0.95em;
+  color: #57B846;
+}
+
+.btn-admin-con{
+  border:none;
+  background-color: #a6a6a6;
+}
+
+/*Pour l'inscription et connexion*/
+.form-group{
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.form-group a{
+  display: block;
+  text-align: right;
+  width: 85%;
+}
+
+.form-group:first-child{
+  margin-top: 0;
+}
+
+.form-group:last-child{
+  margin-bottom: 15px;
+}
+.form-group .inputRegister{
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  border: none;
+  border-bottom: : 1px solid #ccc;
+  outline: none;
+  padding: 1.1vh 15px;
+  color: #fff;
+  font-family: Segoe UI Light, sans-serif;
+  font-size: 1.25em;
+  transition: all 0.25s ease-in-out;
+}
+
+/*Formulaire de récupération du mot de passe*/
+.formForget{
+  text-align: center;
+  width: 30%;
+  display: block;
+  padding: 60px 25px;
+  -webkit-background-clip: padding-box;
+      -ms-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+       -o-background-clip: padding-box;
+          background-clip: padding-box;
+
+  -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, .075);
+      -ms-box-shadow: 0 4px 9px rgba(0, 0, 0, .075);
+     -moz-box-shadow: 0 4px 9px rgba(0, 0, 0, .075);
+       -o-box-shadow: 0 4px 9px rgba(0, 0, 0, .075);
+          box-shadow: 0 4px 9px rgba(0, 0, 0, .075);
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 15vh;
+  left: 35%;
+}
+
+.formForget font{
+  display: block;
+  font-size:  0.95em;
+  font-family: calibri light, sans-serif;
+  line-height:  1.8;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.formForget input, .formForget button{
+  font-size: 1.4em;
+  font-family: calibri light, sans-serif;
+}
+
+.formForget input{
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  color: #333;
+  font-family: Calibri, sans-serif;
+  margin-bottom: 10px;
+  outline: 0;
+}
+
+.formForget div.submit{
+  width: 100%;
+  text-align: right;
+}
+
+.formForget div.submit button{
+  border: 1px solid #ff4500;
+  background-color: #ff4500;
+  color: #fff;
+  font-size: 0.89em;
+  padding: 3px 7px;
+  cursor: pointer;
+  outline: 0;
+}
+
+body.bodyForForget .copyright_footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+
+body.bodyForForget .copyright_footer .footer_menu li:hover a{
+  color: #ff4500;
+}
+
+.userConnect{
+  position: absolute;
+  top: -22%;
+  left: 35%;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 100%;
+  z-index: 999999;
+}
+
+.user-select{
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+}
+
+/*Pour le recrutement*/
+.contentRecrutement{
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.svgRecrutement{
+  margin-top: 35%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.svgRecrutement .describe{
+  display: block;
+}
+
+.svgRecrutement .describe h2{
+  text-transform: uppercase;
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.svgRecrutement .describe font{
+  font-size: .9em;
+  font-family: calibri light, sans-serif;
+
+}
+
+.formRecrutement .contact_form .form-group{
+  text-align: left;
+}
+
+.formRecrutement .contact_form .form-group label{
+  font-size: .85em;
+  font-family: calibri light, sans-serif;
+  margin-bottom: 0;
+}
+
+.formRecrutement .contact_form .form-group label>font{
+  color: red;
+}
+
+.formRecrutement .contact_form .form-group input{
+  margin-bottom: 0;
+  font-size: 1.1em;
+}
+
+.formRecrutement .contact_form .form-group select{
+  padding: 0 15px;
+  font-size: 1.1em;
+}
+
+.formRecrutement .contact_form .form-group textarea{
+  resize: none;
+  font-size: 1.1em;
+}
+
+.contact_form.submit{
+  width: 100%;
+}
+
+
+.contact_form.submit button{
+  width: 100%;
+  line-height: 2;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #ff4500;
+  font-family: segoe UI Black;
+}
+
+.contact_form.submit button:hover{
+  background-color: rgba(255, 69, 0, 0.85);
+  color: #fff;
+}
+
+.userRecrute{
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.userRecrute fieldset i{
+  font-size: 8em;
+  color: #000;
+}
+
+.userRecrute fieldset span{
+  font-weight: bold;
+  font-family: Segoe UI Black;
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+}
+
+.userRecrute fieldset font{
+  font-family: calibri;
+  color: #999;
+}
+
+.userRecrute.step2{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.userRecrute.step2 fieldset i{
+  text-align: center;
+  font-size: 14em;
+  color: #000;
+  transition: all 0.7s ease-in-out;
+}
+
+.userRecrute.step2 fieldset span{
+  font-weight: bold;
+  font-family: Segoe UI Black;
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.userRecrute.step2 fieldset font{
+  font-family: calibri;
+  color: #999;
+  font: 1em;
+}
+
+#formMdp{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  justify-content:   
+}
+
+#formMdp input{
+  font-family: "Segoe UI Black", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  text-rendering: optimizeSpeed;
+  outline: 0;
+}

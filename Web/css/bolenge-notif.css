@@ -1,0 +1,100 @@
+/* Style pour le launch notification */
+.bloc-alert {
+	background-color: var(--bgColorNotif, #333);
+    background-color: #222;
+    box-shadow: 3px 3px -3px #777;
+	width: 375px;
+	height: 80px;
+	position: absolute;
+	left: -500px;
+	bottom: 2.5%;
+	color: var(--blanc, #fff);
+	color: #fff;
+	font-family: Century Gothic, sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	border-radius: 3px;
+	z-index: 9999999999991839877654;
+}
+
+@keyframes blocAlert {
+	20% {
+		left: 0px;
+	}
+	40% {
+		left: 5px;
+	}
+	60% {
+		left: 10px;
+	}
+	80% {
+		left: 15px;
+	}
+	100% {
+		left: 20px;
+	}
+}
+
+.bloc-alert .bloc-type {
+	width: 30px;
+	float: left;
+	height: 100%;
+	margin-right: 10px;
+	border-radius: 3px 0 0 3px;
+}
+.bloc-alert .bloc-type.bloc-info {
+	background-color: var(--infoNotif, #1ecff1);
+	background-color: #1ecff1;
+	border: 1px solid var(--infoNotif, #1ecff1);
+}
+.bloc-alert .bloc-type.bloc-success {
+	background-color: var(--successNotif, #28ef45);
+	background-color: #28ef45;
+	border: 1px solid var(--successNotif, #28ef45);
+}
+.bloc-alert .bloc-type.bloc-danger {
+	background-color: var(--dangerNotif, #f3534f);
+	background-color: #f3534f;
+	border: 1px solid var(--dangerNotif, #f3534f);
+}
+.bloc-alert .bloc-type.bloc-warning {
+	background-color: var(--warningNotif, #ffd907);
+	background-color: #ffd907;
+	border: 1px solid var(--warningNotif, #ffd907);
+}
+.bloc-alert .bloc-content {
+	color: var(--blanc, #fff);
+	color: #fff;
+	padding: 5px;
+	margin-top: 5px;
+}
+.bloc-alert .bloc-content .buttons {
+	position: absolute;
+	top: 28%;
+	right: 10px;
+}
+.bloc-alert .bloc-content .buttons button {
+	background-color: #333;
+	color: #ddd;
+	border: none;
+	border-radius: 3px;
+	padding-top: 4px;
+	padding-bottom: 6px;
+	padding-left: 8px;
+	padding-right: 8px;
+	-webkit-transition: 0.25s linear;
+		 -moz-transition: 0.25s linear;
+			-ms-transition: 0.25s linear;
+			 -o-transition: 0.25s linear;
+					transition: 0.25s linear;
+}
+.bloc-alert .bloc-content .buttons button:hover {
+	background-color: #222;
+}
+
+.bloc-alert .bloc-content .bloc-message {
+	padding-right: 50px;
+}
+.bloc-alert .bloc-content .bloc-message-pd {
+	padding-right: 0;
+}

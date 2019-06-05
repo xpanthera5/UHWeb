@@ -1,0 +1,16 @@
+    $new_slug = strtolower($slug);
+    $new_slug = preg_replace('# #', '-', $new_slug);
+    $new_slug = preg_replace('#é#', 'e', $new_slug);
+    $new_slug = preg_replace('#è#', 'e', $new_slug);
+    $new_slug = preg_replace('#à#', 'a', $new_slug);
+    $new_slug = preg_replace('#â#', 'a', $new_slug);
+    $new_slug = preg_replace('#ê#', 'e', $new_slug);
+    $new_slug = preg_replace('#û#', 'u', $new_slug);
+    $new_slug = preg_replace('#ü#', 'u', $new_slug);
+    $new_slug = preg_replace('#ï#', 'i', $new_slug);
+    $new_slug = preg_replace('#î#', 'i', $new_slug);
+    $new_slug = preg_replace('#ä#', 'a', $new_slug);
+    $new_slug = preg_replace('#ë#', 'e', $new_slug);
+    $new_slug = preg_replace('#ô#', 'o', $new_slug);
+    $new_slug = preg_replace('#ö#', 'o', $new_slug);
+    $new_slug = preg_replace("#'#", '-', $new_slug);

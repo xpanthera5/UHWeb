@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<routes>
+	<route url="/admin" controller="Pages" action="index" />
+	<route url="/admin/connexion" controller="Connexion" action="index" />
+	<route url="/admin/([1-9]+[0-9]*)/tableau-de-bord" controller="dashboard" action="index" />
+	<route url="/admin/session/creation" controller="dashboard" action="create_session" />
+	<route url="/admin/session/recuperation" controller="dashboard" action="session_value" />
+	<route url="/admin/([1-9]+[0-9]*)/formation/ajouter" controller="dashboard" action="session_value" />
+</routes>
