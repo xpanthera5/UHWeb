@@ -1,12 +1,14 @@
 <?php
 	namespace Core;
+
+	use \Core\Request;
 	
 	// session_start();
 
 	/**
 	 * User
 	 */
-	class User
+	class User extends Request
 	{
 		public function getAttribute($attr)
 		{

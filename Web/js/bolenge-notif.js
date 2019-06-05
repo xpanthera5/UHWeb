@@ -2,13 +2,18 @@
  * Permet de lencer un message de notification
  * @param {Object} data L'objet de l'alert contient {type: '', message: '', buttons: ''}
  */
-function launcNotification(data) {
+function launcNotification(data, callback) {
+    if (typeof callback == 'undefined') {
+        callback = function () {
+            return false;
+        }
+    }
     var buttons = data.buttons ? data.buttons : null;
     var elementButton = '';
 
     if (buttons) {
         for (var i = 0; i < buttons.length; i++) {
-            elementButton += '<button id="#' + buttons[i].id + '" data-href="' + buttons[i].href + '">' + buttons[i].text + '</button>';
+            elementButton += '<button id="' + buttons[i].id + '" data-href="' + buttons[i].href + '">' + buttons[i].text + '</button>';
         }
         var classBlocMessage = 'bloc-message';
 
@@ -32,7 +37,7 @@ function launcNotification(data) {
     $('#blocAlertNotfi').animate({
         transition: '1s linear',
         left: '20px'
-    }, 1100);
+    }, 700);
 
     setTimeout(function () {
         $('#blocAlertNotfi').animate({
@@ -43,20 +48,19 @@ function launcNotification(data) {
         setTimeout(function () {
             $('#blocAlertNotfi').remove();
         }, 2000)
+
     }, 15000)
+
+    callback();
 }
 
-function scriptState(message, type, bloc) {
 
-    var color;
+function stopNotication() {
+    $('#stopNotif').click(function (e) {
+        e.preventDefautl();
 
-    if (/success/i.test(type)) {
-        color = "#2cb144";
-    }else if (/error|erreur|oupps/i.test(type)) {
-        color = "#f00"
-    }
+        var hrefLink = $(this).data('href');
 
-    var content =`<div id="setFlash" style="background-color: ${color}">${message}</div>`;
-
-    $(bloc).append(content);
+        alert(hrefLink);
+    })
 }

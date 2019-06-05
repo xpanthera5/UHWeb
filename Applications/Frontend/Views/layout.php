@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <!-- ========== Meta Tags ========== -->
         <meta charset="UTF-8">
@@ -63,17 +63,20 @@
                                 <a class="nav-link " href="#">Contact</a>
                             </li>
 
-                            <?php if ($title != 'Activez votre compte Uhtec'): ?>
-                                
-                            <li class="nav-item">
-                                <a onclick="toggleRegisterBox('tab2', 'tab1')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Connexion</a>
-                            </li>
-                            <li class="nav-item">
-                                <a onclick="toggleRegisterBox('tab1', 'tab2')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Inscription</a>
-                            </li>
-
+                            <?php if ($user->isAuthentificated()): ?>
+                                <li class="user_link">
+                                    <a href="#">
+                                        <img src="/img/default-profile.png" style="width: 35px;" alt="" srcset="">
+                                    </a>
+                                </li>
+                            <?php else: ?>
+                                <li class="nav-item">
+                                    <a onclick="toggleRegisterBox('tab2', 'tab1')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Connexion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a onclick="toggleRegisterBox('tab1', 'tab2')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Inscription</a>
+                                </li>
                             <?php endif ?>
-
                            
                             <li class="search_btn">
                                 <a  href="#">
@@ -216,19 +219,20 @@
                                     <div class="tab-pane fade in active show login-box" style="margin-top: 42%;" id="tab1">
 
                                         <div class="contact_form">
-                                            <div class="form-group">
-                                                <input type="text" class="inputRegister" placeholder="Email ou téléphone">
-                                            </div>
-                                            <div class="form-group">
-                                                <a href="/forgetMdp" class="forgetMdp"> <small>Mot de passe oublié ? </small></a>
-                                                <input type="password" class="inputRegister" placeholder="Mot de passe">
-                                            </div>  
-                                                <a href="#" class="btn btn-primary btn-rounded segoe-light" >Se connecter</a><br>
+                                            <form action="" id="formLogiUser">
+                                                <div class="form-group">
+                                                    <input type="text" class="inputRegister" placeholder="Email" id="emailUserToLogIn" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <a href="/forgetMdp" class="forgetMdp"> <small>Mot de passe oublié ? </small></a>
+                                                    <input type="password" class="inputRegister" placeholder="Mot de passe" id="mdpUserToLogIn" />
+                                                </div>  
+                                                <button type="submit" class="btn btn-primary btn-rounded segoe-light" >Se connecter</button><br>
                                                 
                                                 <div style="padding-top: 20px;width: 70%;">
                                                     <a href="#" onclick="toggleRegisterBox('tab1', 'tab2')" class="forgetMdp">Créer un nouveau compte uhtec</a>
                                                 </div>
-                                            
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade in register-box" id="tab2" style="margin-top: 27%;">

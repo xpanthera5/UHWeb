@@ -5,7 +5,7 @@
 		<title>
 			<?= isset($title) ? $title : 'Gestion d\'erreur'; ?>
 		</title>
-		<link rel="stylesheet" href="css/style-error.css">
+		<link rel="stylesheet" href="/css/style-error.css">
 	</head>
 	<body>
 		<?= $content ?>

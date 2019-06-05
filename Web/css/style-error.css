@@ -1,0 +1,16 @@
+body {
+  background-color: #fff; }
+
+.container-error {
+  font-family: "Segeo UI", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  font-family: Segoe UI Light, sans-serif;
+  padding-top: 10%; }
+  .container-error h1 {
+    font-size: 4rem;
+    font-weight: 300; }
+  .container-error h3 {
+    font-size: 3rem; }
+
+/*# sourceMappingURL=error_style.css.map */

@@ -94,7 +94,9 @@
 
 .bloc-alert .bloc-content .bloc-message {
 	padding-right: 50px;
+	overflow: scroll;
 }
 .bloc-alert .bloc-content .bloc-message-pd {
 	padding-right: 0;
+	overflow: scroll;
 }

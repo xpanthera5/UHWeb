@@ -1669,6 +1669,17 @@ header ul.menu .search_btn {
 header ul.menu .search_btn a {
   font-size: 30px;
 }
+header ul.menu .user_link {
+  padding: 10px 8px !important;
+  color: #ffffff;
+}
+header ul.menu .user_link a {
+  font-size: 30px;
+}
+header ul.menu .user_link a img {
+  border: 0.7px solid #aaaaaa;
+  border-radius: 100%;
+}
 header li ul {
   display: none;
   visibility: hidden;

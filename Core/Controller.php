@@ -27,8 +27,9 @@
 			$this->action = $action;
 			$this->vars = $vars;
 			// $this->request = new Request;
-			// $this->response = new Response;
 			$this->user = new User;
+			$response = new Response($this->app);
+			$response->addVar('user', $this->user);
 
 			// $view = $model.'/'.$action;
 
@@ -39,7 +40,7 @@
 			$method = $this->action;
 
 			if (is_callable([$this, $method])) {
-				$this->$method(new Request, new Response($this->app));
+				$this->$method(new Request, $response);
 			}
 			
 		}
