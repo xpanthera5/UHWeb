@@ -198,6 +198,24 @@
 		}
 
 		/**
+		 * Vérifie si les champs d'un formulaire ne sont pas vides
+		 * @param {array} $fields Le tableau des champs du formulaire
+		 * @return {bool}
+		 */
+		public function bodyNotEmpty($fields = [])
+		{
+			if (count($fields) != 0) {
+                foreach ($fields as $field) {
+                    if (empty($_POST[$field]) || trim($_POST[$field]) == "") {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+		}
+
+		/**
 		 * Vérifie si les champs des données de la méthode GET ne sont pas vides
 		 * @param {array} $fields Le tableau des champs
 		 * @return {bool}

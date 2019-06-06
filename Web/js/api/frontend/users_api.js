@@ -98,8 +98,6 @@ var users = {
 				email: $('#emailUserToLogIn').val(),
 				password: $('#mdpUserToLogIn').val()
 			}
-
-			// console.log(userDatalog);
 			
 			$.ajax({
 					url: getHostApi() + 'users/login',
@@ -109,16 +107,19 @@ var users = {
 						// A mettre un loader
 					},
 					success: function (res) {
-						console.log(res);
 						if (res.success) {
 							var data = res.data;
+
+							if (data) {
+								users.connectUser(data);
+							}
 
 							// createSessionNotification({
 							// 	type: 'info',
 							// 	message: res.message
 							// })
 
-							redirect('/');
+							// redirect('/');
 						} else {
 							$('#mdpUserToLogIn').val('');
 							$('#mdpUserToLogIn').focus();
@@ -139,6 +140,29 @@ var users = {
 						console.log(err.responseText);
 					}
 				})
+		})
+	},
+
+	/**
+	 * Permet de connecté l'utilisateur en ajoutant ses sessions
+	 * @param {Object} user les données de l'utilisateur
+	 */
+	connectUser: function (user) {
+		$.ajax({
+			url: '/ajax/users/connect',
+			type: 'POST',
+			data: user,
+			dataType: 'json',
+			success: function (res) {
+				if (res.success) {
+					redirect('/');
+				}
+			},
+			error: function (err) {
+				console.log(err.responseText);
+				alert('dddddd');
+			}
+
 		})
 	}
 }

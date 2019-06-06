@@ -63,6 +63,12 @@
                                 <a class="nav-link " href="#">Contact</a>
                             </li>
 
+                            <li class="search_btn">
+                                <a  href="#">
+                                   <i class="ion-ios-search"></i>
+                                </a>
+                            </li>
+
                             <?php if ($user->isAuthentificated()): ?>
                                 <li class="user_link">
                                     <a href="#">
@@ -77,12 +83,6 @@
                                     <a onclick="toggleRegisterBox('tab1', 'tab2')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Inscription</a>
                                 </li>
                             <?php endif ?>
-                           
-                            <li class="search_btn">
-                                <a  href="#">
-                                   <i class="ion-ios-search"></i>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>

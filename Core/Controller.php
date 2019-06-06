@@ -12,6 +12,11 @@
 		public $request;
 		public $user;
 		protected $app;
+		protected $objetRetour = [
+			'success' => false,
+			'message' => null,
+			'data' => null
+		];
 
 		/**
 		 * Le cosntructeur du controlleur charge les données correspondantes aux attributs
