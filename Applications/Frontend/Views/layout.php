@@ -221,7 +221,7 @@
                                         <div class="contact_form">
                                             <form action="" id="formLogiUser">
                                                 <div class="form-group">
-                                                    <input type="text" class="inputRegister" placeholder="Email ou téléphone" id="emailUserToLogIn" />
+                                                    <input type="text" class="inputRegister" placeholder="Email" id="emailUserToLogIn" />
                                                 </div>
                                                 <div class="form-group">
                                                     <a href="/forgetMdp" class="forgetMdp"> <small>Mot de passe oublié ? </small></a>

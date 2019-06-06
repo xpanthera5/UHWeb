@@ -49,7 +49,7 @@ var users = {
 						
 					},
 					success: function (res) {
-						console.log(res);
+						// console.log(res);
 						if (res.success) {
 							var data = res.data;
 							// launcNotification({
@@ -120,12 +120,13 @@ var users = {
 							redirect('/');
 						} else {
 							$('#mdpUserToLogIn').val('');
+							$('#mdpUserToLogIn').focus();
 
 							launcNotification({
 								type: 'danger',
 								message: res.message,
 								buttons: [{
-									id: 'confirme',
+									id: 'stopNotif',
 									text: 'Ok',
 									href: '#'
 								}]
