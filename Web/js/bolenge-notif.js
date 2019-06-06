@@ -54,13 +54,9 @@ function launcNotification(data, callback) {
     callback();
 }
 
-<<<<<<< HEAD
 /**
  * Permet de stoper la notification, quand on click sur le button Ok
  */
-=======
-
->>>>>>> d925ea3bb1c87406059bd2b6a8005fc3141da69e
 function stopNotication() {
     $('#stopNotif').click(function (e) {
         e.preventDefautl();
