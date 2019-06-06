@@ -32,7 +32,7 @@ function launcNotification(data) {
     $('#blocAlertNotfi').animate({
         transition: '1s linear',
         left: '20px'
-    }, 1100);
+    }, 700);
 
     setTimeout(function () {
         $('#blocAlertNotfi').animate({

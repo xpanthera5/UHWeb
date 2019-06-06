@@ -22,6 +22,7 @@ function elementsObjectNotEmpty(data) {
 var users = {
 	init: function () {
 		users.register();
+		users.login();
 	},
 
 	/**
@@ -39,7 +40,7 @@ var users = {
 				password: $('#mdpUser').val()
 			}
 
-			if (elementsObjectNotEmpty(userData)) {
+			if (userData) {
 				$.ajax({
 					url: getHostApi() + 'users/register',
 					type: 'POST',
@@ -81,6 +82,61 @@ var users = {
 					}
 				})
 			}
+		})
+	},
+
+	/**
+	 * Permet de faire connecter un utilisateur
+	 * @return {void}
+	 */
+	login: function () {
+		$('#formLogiUser').submit(function (e) {
+			e.preventDefault();
+
+			var userDatalog = {
+				email: $('#emailUserToLogIn').val(),
+				password: $('#mdpUserToLogIn').val()
+			}
+
+			// console.log(userDatalog);
+			
+			$.ajax({
+					url: getHostApi() + 'users/login',
+					type: 'POST',
+					data: userDatalog,
+					beforeSend: function () {
+						// A mettre un loader
+					},
+					success: function (res) {
+						console.log(res);
+						if (res.success) {
+							var data = res.data;
+
+							// createSessionNotification({
+							// 	type: 'info',
+							// 	message: res.message
+							// })
+
+							redirect('/');
+						} else {
+							$('#mdpUserToLogIn').val('');
+
+							launcNotification({
+								type: 'danger',
+								message: res.message,
+								buttons: [{
+									id: 'confirme',
+									text: 'Ok',
+									href: '#'
+								}]
+							});
+						}
+
+					},
+					error: function (err) {
+						console.log(err.responseText);
+					}
+				})
 		})
 	}
 }
