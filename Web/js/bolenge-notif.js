@@ -48,14 +48,19 @@ function launcNotification(data, callback) {
         setTimeout(function () {
             $('#blocAlertNotfi').remove();
         }, 2000)
-    }, 15000);
+
+    }, 15000)
 
     callback();
 }
 
+<<<<<<< HEAD
 /**
  * Permet de stoper la notification, quand on click sur le button Ok
  */
+=======
+
+>>>>>>> d925ea3bb1c87406059bd2b6a8005fc3141da69e
 function stopNotication() {
     $('#stopNotif').click(function (e) {
         e.preventDefautl();

@@ -240,19 +240,19 @@
                                         <div class="contact_form">
                                             <form action="" id="formRegisterData" autocomplete="off">
                                                     <div class="form-group">
-                                                        <input type="text" class="inputRegister" placeholder="Nom" required id="nomUser" data-parsley-minlength="3"  data-parsley-trigger="keypress" />
+                                                        <input type="text" class="inputRegister" placeholder="Nom" id="nomUser" data-parsley-minlength="3"  data-parsley-trigger="keypress" />
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <input type="text" class="inputRegister" placeholder="Prénom" required id="prenomUser" data-parsley-minlength="3"  data-parsley-trigger="keypress" />
+                                                        <input type="text" class="inputRegister" placeholder="Prénom" id="prenomUser" data-parsley-minlength="3"  data-parsley-trigger="keypress" />
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <input type="email"  data-parsley-trigger="keypress" class="inputRegister" placeholder="Adresse email" required id="emailUser" />
+                                                        <input type="email"  data-parsley-trigger="keypress" class="inputRegister" placeholder="Adresse email" id="emailUser" />
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <input type="password" class="inputRegister" data-parsley-minlength="8" placeholder="Mot de passe" required id="mdpUser" />
+                                                        <input type="password" class="inputRegister" data-parsley-minlength="8" placeholder="Mot de passe" id="mdpUser" />
                                                     </div>
                                                     
                                                     <button href="#" class="btn btn-primary btn-rounded segoe-light" id="btnCreateUser">Créer un compte</button><br>
@@ -315,9 +315,6 @@
                             <ul class="footer_menu">
                                 <li>
                                     <a href="/">Accueil</a>
-                                </li>
-                                <li>
-                                    <a href="#">Presentation</a>
                                 </li>
                                 <li>
                                     <a href="/formations">Formations</a>

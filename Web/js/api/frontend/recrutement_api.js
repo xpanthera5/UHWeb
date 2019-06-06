@@ -7,7 +7,7 @@ $(document).ready(function () {
 function initRecrutement() {
     windowLocation = window.location.pathname;
     
-    if (windowLocation = "/recrutement") {
+    if (/recrutement/i.test(windowLocation)) {
         abonnementRecrut();
     }
 
@@ -24,16 +24,23 @@ function abonnementRecrut() {
 
 		if ((inputs[0].value != "") && (inputs[1].value != "") && (inputs[2].value != "") && (inputs[3].value != "")) {
 
-			var recrut = document.querySelector("userRecrute");
+			var recrut = document.querySelector(".userRecrute");
 			
 			$(".formRecrutement").fadeOut(function () {
 
-				recrut.classList.remove("col-md-4");
-				recrut.classList.add("col-md-12");
-				recrut.classList.add("step2");
+				$(".userRecrute").removeClass("col-md-4");
+				$(".userRecrute").addClass("col-md-12");
+				$(".userRecrute").addClass("step2");
 
+				abonnement.removeAttribute("id");
 				abonnement.setAttribute("id", "sendRecrutement");
-				abonnement.innerText = "Finaliser"
+				abonnement.innerText = "Finaliser";
+
+				var content = `<div class="form-group">
+                                	<input type="password" class="form-control" placeholder="Entrer un mot de passe...">
+                                </div>`;
+
+                $('#formMdp').append(content);
 			});
 			
 		}

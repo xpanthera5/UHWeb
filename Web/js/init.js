@@ -1,9 +1,9 @@
 function getHostApi() {
-    return 'http://localhost:8080/UHAPI/';
+    return 'http://localhost:8080/uhapi/';
 }
 
 function getWebSiteHost() {
-    return 'http://UHWEB.com:8080/';
+    return 'http://uhweb.com:8080/';
 }
 
 function elementsObjectNotEmpty(object) {
