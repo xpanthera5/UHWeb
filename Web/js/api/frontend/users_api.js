@@ -130,7 +130,7 @@ var users = {
 									text: 'Ok',
 									href: '#'
 								}]
-							});
+							}, stopNotication());
 						}
 
 					},
