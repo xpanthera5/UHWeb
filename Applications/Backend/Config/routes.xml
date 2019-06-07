@@ -5,5 +5,11 @@
 	<route url="/admin/([1-9]+[0-9]*)/tableau-de-bord" controller="dashboard" action="index" />
 	<route url="/admin/session/creation" controller="dashboard" action="create_session" />
 	<route url="/admin/session/recuperation" controller="dashboard" action="session_value" />
-	<route url="/admin/([1-9]+[0-9]*)/formation/ajouter" controller="dashboard" action="session_value" />
+	<route url="/admin/([1-9]+[0-9]*)/formation/ajouter" controller="Formations" action="create" />
+
+	<!-- Recupere toutes les categories -->
+	<route url="/admin/([1-9]+[0-9]*)/categories/formations" controller="CategoriesFormations" action="index" />
+
+	<!-- Ajout d'une categorie -->
+	<route url="/admin/([1-9]+[0-9]*)/categories/formations/create" controller="CategoriesFormations" action="create" />
 </routes>

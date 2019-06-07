@@ -414,3 +414,214 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 .switch label input[type=checkbox][disabled]:checked + .lever:after {
   background-color: #BDBDBD;
 }
+.costum-card.card-panel {
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  padding: 24px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.costum-card.card {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+}
+
+.costum-card.card .costum-card.card-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.costum-card.card .costum-card.card-title.activator {
+  cursor: pointer;
+}
+
+.costum-card.card.small, .costum-card.card.medium, .costum-card.card.large {
+  position: relative;
+}
+
+.costum-card.card.small .costum-card.card-image, .costum-card.card.medium .costum-card.card-image, .costum-card.card.large .costum-card.card-image {
+  max-height: 60%;
+  overflow: hidden;
+}
+
+.costum-card.card.small .costum-card.card-image + .costum-card.card-content, .costum-card.card.medium .costum-card.card-image + .costum-card.card-content, .costum-card.card.large .costum-card.card-image + .costum-card.card-content {
+  max-height: 40%;
+}
+
+.costum-card.card.small .costum-card.card-content, .costum-card.card.medium .costum-card.card-content, .costum-card.card.large .costum-card.card-content {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.costum-card.card.small .costum-card.card-action, .costum-card.card.medium .costum-card.card-action, .costum-card.card.large .costum-card.card-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.costum-card.card.small {
+  height: 300px;
+}
+
+.costum-card.card.medium {
+  height: 400px;
+}
+
+.costum-card.card.large {
+  height: 500px;
+}
+
+.costum-card.card.horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.costum-card.card.horizontal.small .costum-card.card-image, .costum-card.card.horizontal.medium .costum-card.card-image, .costum-card.card.horizontal.large .costum-card.card-image {
+  height: 100%;
+  max-height: none;
+  overflow: visible;
+}
+
+.costum-card.card.horizontal.small .costum-card.card-image img, .costum-card.card.horizontal.medium .costum-card.card-image img, .costum-card.card.horizontal.large .costum-card.card-image img {
+  height: 100%;
+}
+
+.costum-card.card.horizontal .costum-card.card-image {
+  max-width: 50%;
+}
+
+.costum-card.card.horizontal .costum-card.card-image img {
+  border-radius: 2px 0 0 2px;
+  max-width: 100%;
+  width: auto;
+}
+
+.costum-card.card.horizontal .costum-card.card-stacked {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.costum-card.card.horizontal .costum-card.card-stacked .costum-card.card-content {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.costum-card.card.sticky-action .costum-card.card-action {
+  z-index: 2;
+}
+
+.costum-card.card.sticky-action .costum-card.card-reveal {
+  z-index: 1;
+  padding-bottom: 64px;
+}
+
+.costum-card.card .costum-card.card-image {
+  position: relative;
+}
+
+.costum-card.card .costum-card.card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.costum-card.card .costum-card.card-image .costum-card.card-title {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 24px;
+}
+
+.costum-card.card .costum-card.card-content {
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+}
+
+.costum-card.card .costum-card.card-content p {
+  margin: 0;
+}
+
+.costum-card.card .costum-card.card-content .costum-card.card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.costum-card.card .costum-card.card-content .costum-card.card-title i {
+  line-height: 32px;
+}
+
+.costum-card.card .costum-card.card-action {
+  background-color: inherit;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  position: relative;
+  padding: 16px 24px;
+}
+
+.costum-card.card .costum-card.card-action:last-child {
+  border-radius: 0 0 2px 2px;
+}
+
+.costum-card.card .costum-card.card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: #ffab40;
+  margin-right: 24px;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+  text-transform: uppercase;
+}
+
+.costum-card.card .costum-card.card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color: #ffd8a6;
+}
+
+.costum-card.card .costum-card.card-reveal {
+  padding: 24px;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  overflow-y: auto;
+  left: 0;
+  top: 100%;
+  height: 100%;
+  z-index: 3;
+  display: none;
+}
+
+.costum-card.card .costum-card.card-reveal .costum-card.card-title {
+  cursor: pointer;
+  display: block;
+}

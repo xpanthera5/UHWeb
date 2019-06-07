@@ -105,12 +105,13 @@ function findCommingSessions(limit) {
         },
         success : function (donnees) {
             $("#home")[0].getElementsByClassName('lds-ring')[0].style.display = "none";
-            var cover = '<div id="coverSlider"  class="cover_slider owl-carousel owl-theme">' +
-                            '</div>' +
-                            '<div class="cover_nav">' +
-                                '<ul id="dotFormationComing" class="cover_dots">'
-                                '</ul>' +
-                            '</div>';
+            var cover = `<div id="coverSlider"  class="cover_slider owl-carousel owl-theme">
+                        </div>
+                        <div class="cover_nav">
+                            <ul id="dotFormationComing" class="cover_dots">
+                            </ul>
+                        </div>
+                        `;
             $("#home").html(cover);
 
             // console.log(donnees);
@@ -128,12 +129,14 @@ function findCommingSessions(limit) {
                             }  
                         };
                         var dot = '<li class="'+ dotActive() +'" data="'+ indexSession +'"><span>'+ (indexSession + 1) +'</span></li>';
-                        $("#dotsessionComing").append(dot);
-
+                        $("#dotFormationComing").append(dot);
                         var dateDebutSession = session.date_debut_session;
                         var dateFinSession = session.date_fin_session;
 
-                        var sessionCover = '<div class="cover_item" style="background: url(\'' + getWebSiteHost() + 'img/bg/tickets.png\');">' +
+                        // console.log(customDateSession(dateDebutSession, dateFinSession));
+                        
+
+                        var sessionCover = '<div class="cover_item" style="background: url(\'http://uhtec-website.cd/img/bg/tickets.png\');">' +
                                                     '<div class="slider_content">' +
                                                     '<div class="slider-content-inner">' +
                                                         '<div class="container">' +
@@ -141,7 +144,7 @@ function findCommingSessions(limit) {
                                                                 '<h4 class="cover-title segoe-light">'+ session.titre +'</h4>' +
                                                                 '<strong class="cover-xl-text segoe-black">'+ session.sous_categorie +'</strong>' +
                             '<p class="cover-date segoe-light">' + customDateSession(dateDebutSession, dateFinSession) + ' - ' + session.lieu +'.</p>' +
-                                                                '<a href="/formations/2/'+ session.id_session + '" class=" btn btn-primary btn-rounded segoe-light" >Voir le programme</a>' +
+                                                                '<a href="#" class=" btn btn-primary btn-rounded segoe-light" >Voir le programme</a>' +
                                                             '</div>' +
                                                         '</div>' +
                                                     '</div>' +
@@ -157,7 +160,7 @@ function findCommingSessions(limit) {
                                 autoplay: true,
                                 smartSpeed: 1000,
                                 autoplayHoverPause: false,
-                                dots: true,
+                                dots: false,
                                 nav: false,
                                 items: 1,
                                 animateOut: 'fadeOut',

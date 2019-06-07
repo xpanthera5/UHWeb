@@ -1,5 +1,5 @@
 function getHostApi() {
-    return 'http://localhost:8080/uhapi/';
+    return 'http://localhost:8080/UHAPI/';
 }
 
 function getWebSiteHost() {
