@@ -134,7 +134,7 @@
                 Nos partenaires
             </h3>
         </div>
-        <div class="brand_carousel owl-carousel" id="carouselPartners">
+        <div class="row col-md-12 col-12" id="AllPartners">
             
         </div>
     </div>

@@ -20,20 +20,31 @@ function getPartners() {
         success: function (res) {
             if (res.success) {
 
-                var exitPartners = 0;
-
-                res.data.map(partner => {
-
-                    var content = `<div class="brand_item text-center">
-                                        <img src="${partner.logo}" alt="${partner.nom}">
-                                    </div>`;
-
-                    $("#carouselPartners").append(content)
-                    
-                    exitPartners++;
-
-                    if (exitPartners == res.data.length) {
+                //Tri côté client
+                res.data.sort((partner1, partner2) => {
+                    if (partner1.id > partner2.id) {
+                        return -1;
                     }
+
+                    return 1;
+                });
+
+                res.data.map((partner, item) => {
+
+                    verifyImageFile(getHostApi(), partner.logo, (isset, message, result) => {
+                        
+                        var source = () => {
+                                return result && isset ? result : getWebSiteHost() + `img/brands/b${item + 1}.png`;
+                            },
+                            content = `<div class="col-2 col-md-3 text-center ownPartner">
+                                        <img src="${source()}" alt="${partner.nom}" title="${partner.nom}">
+                                    </div>`
+                        ;
+
+                        $("#AllPartners").append(content);
+
+                    })
+
                 })
             }
         },

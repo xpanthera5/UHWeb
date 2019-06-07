@@ -237,7 +237,7 @@
                 Ils nous font confiance
             </h3>
         </div>
-        <div class="brand_carousel owl-carousel" id="carouselPartners">
+        <div class="row col-12 col-md-12" id="AllPartners">
             
         </div>
     </div>

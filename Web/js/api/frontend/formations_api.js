@@ -136,7 +136,7 @@ function findCommingSessions(limit) {
                         // console.log(customDateSession(dateDebutSession, dateFinSession));
                         
 
-                        var sessionCover = '<div class="cover_item" style="background: url(\'http://uhtec-website.cd/img/bg/tickets.png\');">' +
+                        var sessionCover = '<div class="cover_item" style="background: url(\'http://uhweb.com:8080/img/bg/tickets.png\');">' +
                                                     '<div class="slider_content">' +
                                                     '<div class="slider-content-inner">' +
                                                         '<div class="container">' +

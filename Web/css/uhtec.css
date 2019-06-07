@@ -544,6 +544,8 @@ body.bodyForForget .copyright_footer .footer_menu li:hover a{
   outline: 0;
 }
 
+/* Debut librairie*/
+
 div#setFlash{
   position: fixed;
   z-index: 99999;
@@ -657,4 +659,67 @@ div#setFlash:hover a {
         opacity: 1;
         bottom: 7px;
     }
+}
+
+/* Fin de la librairie*/
+.ownPartner img{
+  image-rendering: optimizeQuality;
+  cursor: pointer;
+  width: 7em;
+  height: 7em;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+
+  opacity: 0.4;
+  transition: all .25s ease-in-out;
+}
+
+.ownPartner img:hover{
+  opacity: 1;
+}
+
+.connect-with{
+  width: 100%;
+  border-top: 1px solid #777;
+  position: relative;
+  height: auto;
+  margin-bottom: 1.9em;
+  text-align: center;
+}
+
+.connect-with font{
+  position: absolute;
+  top: -12.5px;
+  background-color: #303030;
+  width: 50px;
+  left: 45%;
+}
+
+.socialNetworksAPI{
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.socialNetworksAPI font{
+  display: block;
+  margin-bottom: 25px;
+  letter-spacing: 1.05px;
+}
+
+.socialNetworksAPI a{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 20%;
+
+}
+
+.socialNetworksAPI a img{
+  width: 40px;
+  height: 40px;
 }

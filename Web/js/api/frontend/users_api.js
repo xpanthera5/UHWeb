@@ -112,23 +112,25 @@ var users = {
 
 							if (data) {
 								users.connectUser(data);
+								
+								setFlash({
+									message: res.message,
+									type: "success",
+									urlRedirect: "/users/profile",
+									timeRedirect: 5,
+									icon: "<i class=\"now-ui-icons ui-1_check\"></i>",
+									position: "Top"
+								}, "#RegisterModal");
 							}
 
-							setFlash({
-								message: res.message,
-								type: "success",
-								urlRedirect: "/users/profile",
-								timeRedirect: 5,
-								icon: "<i class=\"now-ui-icons ui-1_check\"></i>",
-								position: "Top"
-							}, "#RegisterModal");
+							
 
 						} else {
 
 							setFlash({
 								message: res.message,
 								type: "warning",
-								icon: "<i class=\"now-ui-icons ui-1_check\"></i>",
+								icon: "<i class=\"now-ui-icons travel_info\"></i>",
 								position: "Top"
 							}, "#RegisterModal");
 						}

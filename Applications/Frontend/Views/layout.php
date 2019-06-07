@@ -136,13 +136,12 @@
                                 </div>
                                 <div class="footer_box_body">
                                     <p class="segoe-light">
-                                        Uhtec organise des formations depuis de nombreuses, specialisé dans le hight tech, uhtec a su se demarqué des autres centres de formations...
+                                        <?= strtoupper(WEBSITE_NAME) ?> organise des formations depuis de nombreuses, specialisé dans le hight tech, uhtec a su se demarqué des autres centres de formations...
                                     </p>
                                     
                                     
                                 </div>
 
-                                
                             </div>
                             <div class="footer_box">
                                 <h4 class="footer_title">
@@ -237,8 +236,28 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade in register-box" id="tab2" style="margin-top: 27%;">
-                                        <!-- <h2 style="font-family: Segoe UI Black; text-transform: uppercase; color: #fff; letter-spacing: 1.2px;"> Inscription </h2> -->
+                                    <div class="tab-pane fade in register-box" id="tab2" style="margin-top: 12%;">
+                                        <div class="alternativeConnect">
+                                           <div class="socialNetworksAPI">
+                                                <font>Connectez-vous avec</font>
+                                                <a href="" title="facebook">
+                                                    <img src="/img/svg/facebook.svg">
+                                                </a>
+                                                <a href="" title="Google+">
+                                                    <img src="/img/svg/google-plus.svg">
+                                                </a>
+                                                <a href="" title="Linkedin">
+                                                    <img src="/img/svg/linkedin.svg">
+                                                </a>
+                                                <a href="" title="Instagram">
+                                                    <img src="/img/svg/instagram.svg">
+                                                </a>
+                                            </div>
+                                            <div class="connect-with">
+                                                <font>OR</font>
+                                            </div> 
+                                        </div>
+                                        
                                         <div class="contact_form">
                                             <form action="" id="formRegisterData" autocomplete="off">
                                                     <div class="form-group">
@@ -367,6 +386,8 @@
         <script src="/vendor/swiper/js/swiper.min.js"></script>
         <script src="/js/functions.js"></script>
         <script src="/js/init.js"></script>
+
+        <script src="/js/api/frontend/init.js"></script>
         <script src="/js/api/frontend/jobs_api.js"></script>
         <script src="/js/api/frontend/compagnie_api.js"></script>
         <script src="/js/api/frontend/ville_api.js"></script>
