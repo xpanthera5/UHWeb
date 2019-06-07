@@ -50,6 +50,12 @@
                     </button>
                     <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
                         <ul class=" nav navbar-nav menu">
+                            <li class="search_btn">
+                                <a  href="#">
+                                   <i class="ion-ios-search"></i>
+                                </a>
+                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link " href="/formations">Formations</a>
                             </li>
@@ -63,19 +69,7 @@
                                 <a class="nav-link " href="#">Contact</a>
                             </li>
 
-                            <li class="search_btn">
-                                <a  href="#">
-                                   <i class="ion-ios-search"></i>
-                                </a>
-                            </li>
-
-                            <?php if ($user->isAuthentificated()): ?>
-                                <li class="user_link">
-                                    <a href="#">
-                                        <img src="/img/default-profile.png" style="width: 35px;" alt="" srcset="">
-                                    </a>
-                                </li>
-                            <?php else: ?>
+                            <?php if (!$user->isAuthentificated()): ?>
                                 <li class="nav-item">
                                     <a onclick="toggleRegisterBox('tab2', 'tab1')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Connexion</a>
                                 </li>
@@ -83,6 +77,14 @@
                                     <a onclick="toggleRegisterBox('tab1', 'tab2')" class="nav-link " data-toggle="modal" data-target="#RegisterModal" class="dropdown-item" href="#">Inscription</a>
                                 </li>
                             <?php endif ?>
+
+                            <?php if ($user->isAuthentificated()): ?>
+                                <li class="nav-item user_link">
+                                    <a href="#" class="nav-link">
+                                        <i class="now-ui-icons users_circle-08"></i>&nbsp;&nbsp;<font><?= $user->getAttribute("user_prenom")." ".$user->getAttribute("user_nom") ?></font>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -355,6 +357,7 @@
         <script src="/js/wow.min.js"></script>
         <!-- Custom js -->
         <script src="/js/bolenge-notif.js"></script>
+        <script src="/js/AllFunctions.js"></script>
         <script src="/js/main.js"></script>
         <script src="/js/uhtec.js"></script>
         <script src="/vendor/parsley/js/parsley.js"></script>

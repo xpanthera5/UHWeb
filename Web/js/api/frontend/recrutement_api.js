@@ -40,6 +40,10 @@ function abonnementRecrut() {
                                 	<input type="password" class="form-control" placeholder="Entrer un mot de passe...">
                                 </div>`;
 
+                $("#sendRecrutement").click(function (e) {
+                	e.stopPropagation();
+                })
+
                 $('#formMdp').append(content);
 			});
 			

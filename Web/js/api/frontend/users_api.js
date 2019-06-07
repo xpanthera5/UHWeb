@@ -48,40 +48,40 @@ var users = {
 						
 					},
 					success: function (res) {
-						// console.log(res);
+						
 						if (res.success) {
 							var data = res.data;
-							// launcNotification({
-							// 	type: 'success',
-							// 	message: 'Vous êtes enregistré avec succès',
-							// 	buttons: [{
-							// 		id: 'cancel',
-							// 		text: 'Ok',
-							// 		href: '#'
-							// 	}]
-							// })
 
-							window.location.pathname = '/users/profile';
-						}else {
-							launcNotification({
-								type: 'danger',
+							setFlash({
 								message: res.message,
-								buttons: [{
-									id: 'confirme',
-									text: 'Ok',
-									href: '#'
-								}]
-							});
+								type: "success",
+								urlRedirect: "/users/profile",
+								timeRedirect: 5,
+								icon: "<i class=\"now-ui-icons ui-1_check\"></i>",
+								position: "Top"
+							}, "#RegisterModal");
+
+						}else {
+							setFlash({
+								message: res.message,
+								type: "warning",
+								icon: "<i class=\"now-ui-icons travel_info\"></i>",
+								position: "Top"
+							}, "#RegisterModal");
 						}
 						
 					},
 					error: function (err) {
 						console.log(err);
-						
 					}
 				})
 			}else{
-				
+				setFlash({
+					message: "Certains champs sont requis...",
+					type: "warning",
+					icon: "<i class=\"now-ui-icons travel_info\"></i>",
+					position: "Top"
+				}, "#RegisterModal");
 			}
 		})
 	},
@@ -114,30 +114,28 @@ var users = {
 								users.connectUser(data);
 							}
 
-							// createSessionNotification({
-							// 	type: 'info',
-							// 	message: res.message
-							// })
-
-							// redirect('/');
-						} else {
-							$('#mdpUserToLogIn').val('');
-							$('#mdpUserToLogIn').focus();
-
-							launcNotification({
-								type: 'danger',
+							setFlash({
 								message: res.message,
-								buttons: [{
-									id: 'stopNotif',
-									text: 'Ok',
-									href: '#'
-								}]
-							}, stopNotication());
+								type: "success",
+								urlRedirect: "/users/profile",
+								timeRedirect: 5,
+								icon: "<i class=\"now-ui-icons ui-1_check\"></i>",
+								position: "Top"
+							}, "#RegisterModal");
+
+						} else {
+
+							setFlash({
+								message: res.message,
+								type: "warning",
+								icon: "<i class=\"now-ui-icons ui-1_check\"></i>",
+								position: "Top"
+							}, "#RegisterModal");
 						}
 
 					},
 					error: function (err) {
-						console.log(err.responseText);
+						console.log(err);
 					}
 				})
 		})
@@ -160,7 +158,6 @@ var users = {
 			},
 			error: function (err) {
 				console.log(err.responseText);
-				alert('dddddd');
 			}
 
 		})
